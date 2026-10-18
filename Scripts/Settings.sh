@@ -30,7 +30,10 @@ echo "CONFIG_PACKAGE_luci=y" >> ./.config
 echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config
-
+# Athena LED 控制器（AX6600 雅典娜屏幕）
+echo "CONFIG_PACKAGE_athena-led=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-athena-led=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-i18n-athena-led-zh-cn=y" >> ./.config
 #引入私有扩展配置
 if [ -f "$GITHUB_WORKSPACE/Config/PRIVATE.txt" ]; then
 	echo "Applying private configurations from PRIVATE.txt..."
